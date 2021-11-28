@@ -1,0 +1,628 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive CV</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+ margin:0;
+ padding:0;
+ box-sizing:border-box;
+ font-family: 'Poppins', sans-serif;
+}
+body
+{
+background: lightblue;
+display:flex;
+justify-context: center;
+align-items:center;
+min-height: 100vh;
+}
+.container
+{
+position: relative;
+width: 100%;
+max-width: 1000px;
+min-height: 1000px;
+background: #fff;
+margin: 50px;
+display:grid;
+grid-template-columns: 1fr 2fr ;
+box-shadow: 0 35px; 55px rgba(0,0,0,0.1);
+}
+
+.container .left_Side
+{
+position: relative;
+background: #003147;
+padding: 40px;
+}
+
+.profileText
+{
+position: relative;
+display: flex;
+flex-direction: column;
+align-items; center;
+padding-bottom: 20px;
+border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.profileText .imgBx
+{
+position: relative;
+width: 200px;
+height: 200px;
+border-radius: 50%;
+overflow: hidden;
+}
+
+.profileText .imgBx img
+{
+position: absolute;
+top:0;
+left: 0;
+right: 10px;
+width: 100%;
+height: 100%;
+ object-fit: cover;
+
+}
+
+.profileText h2
+{
+color: #fff;
+font-size: 1.5em;
+margin-top: 20px;
+text-trnsform : uppercase ;
+text-align:center;
+font-weight: 600;
+line-height:1.4em;
+}
+
+
+.profileText h2 span 
+{
+font-size: 0.8em;
+font-weight: 300;
+
+} 
+
+
+
+
+.contactInfo
+{
+padding-top:40px;
+}
+
+.title 
+{
+color: #fff;
+text-transform: uppercase;
+font-weight:600;
+letter-spacing: 1px;
+margin-bottom: 20px;
+}
+
+.contactInfo ul
+{
+position: relative;
+
+}
+
+.contactInfo ul li
+{
+position: relative;
+list-styke:none;
+margin: 10px 0;
+cursor: pointer; 
+}
+
+
+
+
+.containerInfo ul li .icon
+{
+display: inline-block;
+width: 30px;
+font-size: 18px;
+color: #03a9f4;
+}
+
+.contactInfo ul li span 
+{
+color: #fff;
+font-weight:300;
+}
+
+
+
+.contactInfo.education li
+{
+margin-bottom:15px;
+
+}
+
+.contactInfo.education h5
+{
+color: #03a9f4;
+font-weight: 500;
+}
+
+.contactInfo.education h4:nth-child(2)
+{
+color: #fff;
+font-weight: 500;
+}
+
+.contactInfo.education h4
+{
+color: #fff;
+font-weight:300;
+}
+
+
+
+.contactInfo.language .percent
+{
+position: relative;
+width: 100%;
+height:6px;
+background: #081921;
+display:block;
+margin-top: 5px;
+}
+
+
+.contactInfo.language .percent div
+{
+position: absolute;
+ top: 0;
+ Left: 0;
+ height:100%;
+ background:#03a9f4;
+}
+
+
+
+
+
+
+
+
+.container .right_Side
+{
+position: relative;
+background: #fff;
+padding: 40px;
+}
+
+
+.about
+{
+margin-bottom: 0;
+
+}
+
+.title2
+{
+color: #003147;
+text-transform:uppercase;
+letter-spacing: 1px;
+margin-bottom:10px;
+}
+
+p
+{
+color: #333;
+}
+
+
+.about .box
+{
+display: flex;
+flex-direction: row;
+margin: 20px 0;
+}
+
+.about .box .year_company
+{
+min-width: 150px;
+
+}
+
+.about .box .year_company h5
+{
+text-tranform: uppercase;
+color:#848c90;
+font-weight: 600; 
+}
+ 
+ .about .box .text h4 
+ {
+ text-transform:uppecase;
+ color:#2a7da2; 
+ font-size: 16px;
+ }
+ 
+ 
+ .skills .box
+ {
+position: relative;
+ width: 100%;
+ display: grid;
+ grid-template-columns: 150px 1fr;
+ justify-content: center;
+ align-items: center;
+ }
+ 
+ 
+  .skills .box h4
+  {
+  text-transform: uppercase;
+  color: #848c99;
+  font-weight:500;
+  }
+ 
+  .skills .box .percent
+ {
+ position: relative;
+ width: 100%;
+ height: 10px;
+ background: #f0f0f0;
+ }
+ 
+  .skills .box .percent div
+  {
+  position: absolute;
+  top: 0;
+  left: 00;
+  height: 100%;
+  background: #03a9f4; 
+  }
+ 
+ 
+ .interest ul
+ {
+ display:grid;
+ grid-template-columns: repeat(4,1fr)
+ }
+ 
+ .interest ul li
+ {
+ list-style: none;
+ color:#333;
+ font-weight: 500;
+ margin: 10px 0; 
+ }
+ 
+ 
+.interest ul li .fa
+{
+color: #03a9f4;
+font-size: 18px;
+width: 20px;
+}
+
+
+@media (max-width: 1000px)
+{
+.container
+{
+margin: 10px;
+grid-template-columns: repeat(1,1fr);
+}
+.interest ul
+{
+grid-template-columns: repeat(1,1fr);
+}
+}
+
+
+
+@media (max-width: 600px)
+{
+.about .box
+{
+flex-direction: column;
+}
+.about .box .year_company
+{
+min-width: 150px;
+margin-bottm: 5px;
+}
+.interest ul
+{
+grid-template-columns: repeat(1,1fr);
+}
+.skills .box
+{
+grid-template-columns: repeat(1,1fr);
+}
+}
+
+
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.google {
+  background: #dd4b39;
+  color: white;
+}
+
+.linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.github {
+  background: #bb0000;
+  color: white;
+}
+
+.tiktok {
+  background: #3B5998;
+  color: white;
+}
+
+
+.content {
+  margin-left: 75px;
+  font-size: 30px;
+}
+
+
+</style>
+<body>
+<div class="container">
+<div class="left_Side">
+<div class="profileText">
+<div class="imgBx">
+<img src="images/hemanta.jpg">
+</div>
+<h2>Hemanta Adhikari<br><span>Engineering Student(NCIT)</scan></h2>
+</div>
+<div class="contactInfo">
+<h3 class="title">Contact Info</h3>
+<ul>
+<li>
+<span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+<span class="text">9822445288</span>
+</li>
+
+<li>
+<span class="icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
+<span class="text">hemuadhikari1xyz123@gmail.com</span>
+</li>
+
+<li>
+<span class="icon"><i class="fa fa-globe" aria-hidden="true"></i></span>
+<span class="text">http://hemanta.atspace.cc/</span>
+</li>
+
+<li>
+<span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+<span class="text">https://www.linkedin.com/in/hemanta-adhikari-484264227/</span>
+</li>
+
+<li>
+<span class="icon"><i class="fa fa-map" aria-hidden="true"></i></span>
+<span class="text">Patan,lalitpur,Nepal</span>
+</li>
+
+
+
+</ul>
+</div>
+
+
+<div class="contactInfo education">
+<h3 class="title">Education</h3>
+<ul>
+<li>
+<h5>2018-2022</h5>
+<h4>Bachelor Degree in Computer Engineering</h4>
+<h4>Nepal College of Information Technology(NCIT),Balkumari,Lalitpur</h4>
+</li>
+
+<li>
+<h5>2015-2017</h5>
+<h4>+2 in Science </h4>
+<h4>Laboratory Higher Secondary School,kiritipur,Kathmandu</h4>
+</li>
+
+
+
+
+<li>
+<h5>2004-2014</h5>
+<h4>1 to 10 study </h4>
+<h4>Jivan Jyoti Higher Secondary School ,Dasharathpur,Surkhet</h4>
+</li>
+
+</ul>
+</div>
+
+
+
+
+
+<div class="contactInfo language">
+<h3 class="title">Languages</h3>
+<ul>
+<li>
+<span class="text">Nepali</span>
+<span class="percent">
+<div style="width: 100%;"></div>
+</span>
+</li>
+
+<li>
+<span class="text">English</span>
+<span class="percent">
+<div style="width: 90%;"></div>
+</span>
+</li>
+<li>
+<span class="text">Hindi</span>
+<span class="percent">
+<div style="width: 80%;"></div>
+</span>
+</li>
+</ul>
+
+</div>
+</div>
+
+
+
+
+
+
+<div class="right_Side">
+<div class="about">
+<h2 class="title2">Profile</h2>
+<p>I am a hard working, honest individual. I am a good timekeeper, always willing to learn new skills. <br><br>I am able to work independently in busy environments and also within a team setting.</p>
+</div>
+<div class="about">
+<h2 class="title2">Experience</h2>
+<div class="box">
+<div class="year_company">
+<h5>2018-2019</h5>
+<h5>Self Study</h5>
+</div>
+<div class="text">
+<h4>Html,CSS </h4>
+<p>At the begining, I started to learn basic Html, Css for Front end</p>
+
+</div>
+</div>
+
+<div class="box">
+<div class="year_company">
+<h5>2019-2020</h5>
+<h5>Self Study</h5>
+</div>
+<div class="text">
+<h4>PHP,React JS,Node Js,JAVA</h4>
+<p>I started to learn Php,React JS,JAVA and Node JS which give me basic idea about relation between frontend and backend. </p>
+
+
+</div>
+</div>
+
+<div class="box">
+<div class="year_company">
+<h5>2020-2021</h5>
+<h5>Self Study</h5>
+</div>
+<div class="text">
+<h4>Sql,MySql</h4>
+<p>I started to learn Sql and Mysql for Database and have basic idea of how query are used.</p>
+
+</div>
+</div>
+</div>
+<div class="about skills">
+<h2 class="title2">Professional Skills</h2>
+<div class="box">
+<h4>Html</h4>
+<div class="percent">
+<div style="width:90%;"></div>
+</div>
+</div>
+
+<div class="box">
+<h4>CSS</h4>
+<div class="percent">
+<div style="width:80%;"></div>
+</div>
+</div>
+
+<div class="box">
+<h4>PHP</h4>
+<div class="percent">
+<div style="width:70%;"></div>
+</div>
+</div>
+
+<div class="box">
+<h4>React JS</h4>
+<div class="percent">
+<div style="width:80%;"></div>
+</div>
+</div>
+
+<div class="box">
+<h4>Node JS</h4>
+<div class="percent">
+<div style="width:80%;"></div>
+</div>
+</div>
+
+<div class="box">
+<h4>JAVA</h4>
+<div class="percent">
+<div style="width:50%;"></div>
+</div>
+</div>
+
+</div>
+<div class="about interest">
+<h2 class="title2">Interest</h2>
+<ul>
+<li><i class="fa fa-gamepad" aria-hidden="true"></i>Gaming</li>
+<li><i class="fa fa-microphone" aria-hidden="true"></i>Singing</li>
+<li><i class="fa fa-book" aria-hidden="true"></i>Reading</li>
+<li><i class="fa fa-cutlery" aria-hidden="true"></i>Cooking</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="icon-bar">
+  <a href="https://www.facebook.com/hemanta.adhikari.927" class="facebook"><i class="fa fa-facebook"></i></a> 
+   <a href="https://www.instagram.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
+  <a href="https://twitter.com/home" class="twitter"><i class="fa fa-twitter"></i></a> 
+  <a href="http://hemanta.atspace.cc/" class="google"><i class="fa fa-google"></i></a> 
+ <a href="https://github.com/Hemanta-dev" class="github"><i class="fa fa-github"></i></a>
+ 
+  
+    
+</div>
+
+</body>
+</html>
